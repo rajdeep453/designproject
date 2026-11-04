@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_path": "C:\\designproject\\RAG_fairness\\models\\Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "torch": "2.6.0+cu126",
+  "cuda_runtime": "12.6",
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "dtype": "float16",
+  "prompt_tokens": 50,
+  "generated_tokens": 38,
+  "generation_seconds": 1.4591633000000002,
+  "answer": "BM25 is used to optimize the relevance of search results in a retrieval-augmented system by adjusting the probability of each term based on its frequency and importance within the document corpus.",
+  "gpu_allocated_bytes": 1004843520,
+  "gpu_reserved_bytes": 1065353216,
+  "gpu_peak_allocated_bytes": 1008363520,
+  "gpu_peak_reserved_bytes": 1065353216
+}

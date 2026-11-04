@@ -1,0 +1,9 @@
+{
+  "kind": "synthetic integration validation",
+  "not_a_research_experiment": true,
+  "retriever": "FakeRetriever from tests/test_graph_rag.py",
+  "generator": "FakeGenerator from tests/test_graph_rag.py",
+  "evaluator": "FakeEvaluator from tests/test_graph_rag.py",
+  "dataset": "single synthetic question and two synthetic documents",
+  "purpose": "exercise adapter wiring and artifact serialization only"
+}

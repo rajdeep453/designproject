@@ -1,0 +1,120 @@
+{
+  "mode": "adaptive_fair",
+  "dataset_size": 10,
+  "utility_metrics": {
+    "mrr": 0.6,
+    "rouge-1": 0.199999999,
+    "em": 0.2,
+    "optionem": 0.9,
+    "priorityfairness": 0.8
+  },
+  "evaluator_metrics": {
+    "em": 0.2,
+    "rouge-1": 0.199999999,
+    "option_em": 0.9,
+    "position_male_ratio": 0.2,
+    "position_female_ratio": 0.3,
+    "mrr_male_at_one": 0.6,
+    "mrr_female_at_one": 0.3,
+    "mrr_male_at_all": 0.7,
+    "mrr_female_at_all": 0.6166666666666667
+  },
+  "retrieval_performance": {
+    "evaluator_metrics": {
+      "mrr": 0.6
+    },
+    "mean_graph_relevance_score_proxy": 0.08425308969446899
+  },
+  "initial_group_disparity_mean": 0.33333333333333337,
+  "group_disparity_mean": 0.19999999999999998,
+  "group_disparity_reduction": 0.1333333333333334,
+  "equalized_odds": null,
+  "mean_retrieved_documents": 5.0,
+  "additional_retrieval_operations": 14,
+  "additional_documents": 2,
+  "adaptive_triggered_queries": 7,
+  "controller_decisions": [
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "no_relevant_candidates"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "no_relevant_candidates"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "no_relevant_candidates"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "evidence_sufficient"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "retrieve",
+        "added_documents": 1,
+        "search_operations": 2,
+        "missing_groups_after": []
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "no_relevant_candidates"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "evidence_sufficient"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "evidence_sufficient"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "stop",
+        "reason": "no_relevant_candidates"
+      }
+    ],
+    [
+      {
+        "round": 0,
+        "action": "retrieve",
+        "added_documents": 1,
+        "search_operations": 2,
+        "missing_groups_after": []
+      }
+    ]
+  ],
+  "timing_breakdown_seconds": {
+    "initial_retrieval_seconds": 0.01497670000026119,
+    "graph_and_controller_seconds": 0.04887750000125379,
+    "generation_seconds": 1.9671588000001066,
+    "evaluation_seconds": 0.013086500001008972
+  },
+  "elapsed_seconds": 2.0538415999999415,
+  "note": "Equalized odds is reported only when explicit relevance labels are supplied. Group disparity is omitted when demographic labels are unavailable."
+}

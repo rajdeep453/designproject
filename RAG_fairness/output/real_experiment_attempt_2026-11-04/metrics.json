@@ -1,0 +1,6 @@
+﻿{
+  "baseline": {"exact_match": null, "rouge_1": null, "gender_disparity": null, "geographic_disparity": null, "equalized_odds": null, "retrieval_count": null, "average_latency_seconds": null},
+  "graph": {"exact_match": null, "rouge_1": null, "gender_disparity": null, "geographic_disparity": null, "equalized_odds": null, "retrieval_count": null, "average_latency_seconds": null},
+  "adaptive_fair": {"exact_match": null, "rouge_1": null, "gender_disparity": null, "geographic_disparity": null, "equalized_odds": null, "retrieval_count": null, "average_latency_seconds": null},
+  "reason": "No real retrieval or generation ran; null means unavailable, not zero."
+}

@@ -1,0 +1,23 @@
+﻿Environment checks:
+- Temporary Python 3.10.20 venv
+- Pinned packages installed and import-verified: PyYAML 6.0.1, pandas 2.2.2, numpy 1.26.4, tqdm 4.66.5
+- Graph module imports: PASS
+- Unit tests: 14 passed, 0 failed
+
+Baseline entry-point attempt:
+Command: python run_exp.py --help
+Result: BLOCKED before CLI execution
+Error: ModuleNotFoundError: No module named 'transformers'
+
+Offline evaluator:
+Import check: PASS after installing pandas/numpy/PyYAML/tqdm in the temporary venv.
+Evaluation was not run because no real experiment results were generated; existing output is synthetic validation only.
+
+Resource inspection:
+- No local retrieval corpus suitable for the configured retrieval was found.
+- No FAISS/Lucene index was found.
+- my_config.yaml uses /path_to_your_* placeholders.
+- No local generator weights found. Local HF cache has MiniLM-L6-v2 and NLI DeBERTa-v3-small only.
+- Git LFS objects for 57 dataset files were fetched to .git/lfs/objects, but absent .gitattributes means checkout files remain LFS pointer text. Verified experiment inputs were copied to output/real_data; source pointer files were left unchanged.
+
+No real EM, ROUGE-1, gender/geographic disparity, Equalized Odds, retrieval count, or latency metrics were measured.

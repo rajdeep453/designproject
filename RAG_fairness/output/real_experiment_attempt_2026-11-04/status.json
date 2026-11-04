@@ -1,0 +1,28 @@
+﻿{
+  "experiment_status": "blocked_before_real_inference",
+  "date": "2026-11-04",
+  "synthetic_validation_is_not_included": true,
+  "environment": {
+    "python": "3.10.20 temporary venv",
+    "installed_for_checks": {"PyYAML": "6.0.1", "pandas": "2.2.2", "numpy": "1.26.4", "tqdm": "4.66.5"},
+    "graph_module_imports": "passed",
+    "unit_tests": {"passed": 14, "failed": 0},
+    "gpu": "NVIDIA RTX 4050, 6141 MiB VRAM (detected in prior environment inventory)",
+    "missing_runtime_packages": ["transformers", "torch"]
+  },
+  "data_verification": {
+    "gender_source": {"archive": "data/trec_gender_2022.tar.gz", "rows": 22271, "annotation_counts": {"male": 18768, "female": 3503}, "columns": ["q_id", "q_text", "doc_id", "gender", "doc_title", "first sentence"]},
+    "geographic_source": {"archive": "data/trec_geo_full_2022.tar.gz", "rows": 2087033, "annotation_counts": {"non Europe": 1652701, "Europe": 434332}, "columns": ["", "q_id", "q_text", "doc_id", "geographic_location", "doc_title", "relevant"]},
+    "extracted_query_splits": {"gender": 4900, "geographic": 5000},
+    "split_metadata": "group/relevance labels are in separate _gt.json files; question JSONL has id, question, golden_answers",
+    "original_lfs_worktree_files_modified": false
+  },
+  "resource_blockers": [
+    "No retrieval corpus or search index is present in the repository or extracted experiment files.",
+    "my_config.yaml still contains placeholder corpus, index, data, and model paths.",
+    "No generator model is present in the local Hugging Face cache; cached local models are sentence-transformers/all-MiniLM-L6-v2 and cross-encoder/nli-deberta-v3-small.",
+    "Baseline entry point import fails with ModuleNotFoundError: transformers; torch is also unavailable."
+  ],
+  "measured_research_metrics": {"baseline": null, "graph": null, "adaptive_fair": null},
+  "metric_status": "N/A; no model retrieval or generation was executed"
+}

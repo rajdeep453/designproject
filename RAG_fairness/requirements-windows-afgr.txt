@@ -1,0 +1,15 @@
+# Install CUDA PyTorch separately with:
+# python -m pip install torch==2.6.0+cu126 --extra-index-url https://download.pytorch.org/whl/cu126
+numpy==1.26.4
+pandas==2.2.2
+PyYAML==6.0.1
+tqdm==4.66.5
+transformers==4.48.3
+accelerate==1.2.1
+safetensors==0.5.3
+huggingface-hub==0.29.3
+rank-bm25==0.2.2
+rouge==1.0.1
+openai==1.40.0
+tiktoken==0.7.0
+streamlit==1.37.1

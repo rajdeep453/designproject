@@ -1,0 +1,1725 @@
+{
+  "status": "retrieval_only_precheck_not_a_complete_rag_experiment",
+  "scope": "real TREC-derived questions and golden documents in topic-specific restricted judged pools; not full-corpus retrieval",
+  "generator_ran": false,
+  "ground_truth_used_for_controller": false,
+  "question_count": 10,
+  "question_ids": [
+    "test_1",
+    "test_101",
+    "test_201",
+    "test_301",
+    "test_401",
+    "test_501",
+    "test_601",
+    "test_701",
+    "test_801",
+    "test_901"
+  ],
+  "topics": [
+    "Agriculture",
+    "Amphibians and Reptiles",
+    "Astronomy",
+    "Aviation",
+    "Biography/WikiProject Actors and Filmmakers",
+    "Biography/WikiProject Musicians",
+    "Biography/science and academia work group",
+    "Birds",
+    "Books",
+    "Business"
+  ],
+  "retrieval_method": "pure-Python BM25Okapi formula; lowercase regex tokens [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*; no stemming/stopword filtering; k1=1.5, b=0.75, epsilon=0.25; stable original-order tie break",
+  "top_k": 5,
+  "config_path": "C:\\designproject\\RAG_fairness\\graph_rag\\pilot10_gender.yaml",
+  "qrels_path_used_after_inference": "C:\\designproject\\RAG_fairness\\output\\real_data\\trek_2022_fairness\\pilot10_gender_qrels.json",
+  "methods": {
+    "baseline_retrieval": {
+      "items": [
+        {
+          "question_id": "test_1",
+          "topic_id": "Agriculture",
+          "retrieved_document_ids": [
+            "6204715",
+            "81034",
+            "4302211",
+            "299672",
+            "33541166"
+          ]
+        },
+        {
+          "question_id": "test_101",
+          "topic_id": "Amphibians and Reptiles",
+          "retrieved_document_ids": [
+            "66161",
+            "53803157",
+            "36049225",
+            "65493245",
+            "45633243"
+          ]
+        },
+        {
+          "question_id": "test_201",
+          "topic_id": "Astronomy",
+          "retrieved_document_ids": [
+            "173278",
+            "71557",
+            "191098",
+            "693482",
+            "19864144"
+          ]
+        },
+        {
+          "question_id": "test_301",
+          "topic_id": "Aviation",
+          "retrieved_document_ids": [
+            "70592",
+            "685985",
+            "1192074",
+            "404300",
+            "199511"
+          ]
+        },
+        {
+          "question_id": "test_401",
+          "topic_id": "Biography/WikiProject Actors and Filmmakers",
+          "retrieved_document_ids": [
+            "105307",
+            "2232087",
+            "7886",
+            "15308",
+            "63556"
+          ]
+        },
+        {
+          "question_id": "test_501",
+          "topic_id": "Biography/WikiProject Musicians",
+          "retrieved_document_ids": [
+            "85432",
+            "12309",
+            "13066",
+            "49107",
+            "12406"
+          ]
+        },
+        {
+          "question_id": "test_601",
+          "topic_id": "Biography/science and academia work group",
+          "retrieved_document_ids": [
+            "8095",
+            "68335",
+            "26275",
+            "31372",
+            "23979"
+          ]
+        },
+        {
+          "question_id": "test_701",
+          "topic_id": "Birds",
+          "retrieved_document_ids": [
+            "766582",
+            "67992",
+            "64057049",
+            "6700844",
+            "1052116"
+          ]
+        },
+        {
+          "question_id": "test_801",
+          "topic_id": "Books",
+          "retrieved_document_ids": [
+            "642847",
+            "7563288",
+            "1910758",
+            "728452",
+            "88351"
+          ]
+        },
+        {
+          "question_id": "test_901",
+          "topic_id": "Business",
+          "retrieved_document_ids": [
+            "70964",
+            "173031",
+            "679379",
+            "364094",
+            "698205"
+          ]
+        }
+      ],
+      "initial_documents": 50,
+      "final_documents": 50,
+      "additional_retrieval_operations": 0,
+      "additional_documents": 0,
+      "elapsed_seconds": 0.015244800000800751,
+      "offline_annotation_metrics": {
+        "mean_mrr_first_relevant_at_5": 0.675,
+        "relevant_irrelevant_by_group": {
+          "male": {
+            "relevant": 30,
+            "irrelevant": 0
+          },
+          "female": {
+            "relevant": 0,
+            "irrelevant": 20
+          }
+        },
+        "relevant_evidence_group_disparity_mean": 1.0,
+        "equalized_odds": {
+          "status": "N/A",
+          "reason": "The released split has only relevant male and irrelevant female documents; each group lacks one relevance class, so group-conditional TPR/FPR gaps are not estimable."
+        },
+        "per_query": [
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 88
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 51
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 2,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 3
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 2,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 3
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.25,
+            "first_relevant_rank": 4,
+            "relevant_candidate_count": 87
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 88
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 90
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 1,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 4
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 86
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 89
+          }
+        ]
+      },
+      "average_latency_seconds_per_query": 0.0015244800000800752
+    },
+    "graph_retrieval": {
+      "items": [
+        {
+          "question_id": "test_1",
+          "topic_id": "Agriculture",
+          "retrieved_document_ids": [
+            "6204715",
+            "81034",
+            "299672",
+            "4302211",
+            "33541166"
+          ]
+        },
+        {
+          "question_id": "test_101",
+          "topic_id": "Amphibians and Reptiles",
+          "retrieved_document_ids": [
+            "53803157",
+            "66161",
+            "45633243",
+            "36049225",
+            "65493245"
+          ]
+        },
+        {
+          "question_id": "test_201",
+          "topic_id": "Astronomy",
+          "retrieved_document_ids": [
+            "71557",
+            "191098",
+            "693482",
+            "173278",
+            "19864144"
+          ]
+        },
+        {
+          "question_id": "test_301",
+          "topic_id": "Aviation",
+          "retrieved_document_ids": [
+            "70592",
+            "685985",
+            "1192074",
+            "199511",
+            "404300"
+          ]
+        },
+        {
+          "question_id": "test_401",
+          "topic_id": "Biography/WikiProject Actors and Filmmakers",
+          "retrieved_document_ids": [
+            "15308",
+            "105307",
+            "2232087",
+            "7886",
+            "63556"
+          ]
+        },
+        {
+          "question_id": "test_501",
+          "topic_id": "Biography/WikiProject Musicians",
+          "retrieved_document_ids": [
+            "13066",
+            "85432",
+            "49107",
+            "12406",
+            "12309"
+          ]
+        },
+        {
+          "question_id": "test_601",
+          "topic_id": "Biography/science and academia work group",
+          "retrieved_document_ids": [
+            "68335",
+            "8095",
+            "26275",
+            "31372",
+            "23979"
+          ]
+        },
+        {
+          "question_id": "test_701",
+          "topic_id": "Birds",
+          "retrieved_document_ids": [
+            "766582",
+            "67992",
+            "6700844",
+            "64057049",
+            "1052116"
+          ]
+        },
+        {
+          "question_id": "test_801",
+          "topic_id": "Books",
+          "retrieved_document_ids": [
+            "7563288",
+            "88351",
+            "642847",
+            "1910758",
+            "728452"
+          ]
+        },
+        {
+          "question_id": "test_901",
+          "topic_id": "Business",
+          "retrieved_document_ids": [
+            "173031",
+            "364094",
+            "70964",
+            "679379",
+            "698205"
+          ]
+        }
+      ],
+      "initial_documents": 50,
+      "final_documents": 50,
+      "additional_retrieval_operations": 0,
+      "additional_documents": 0,
+      "elapsed_seconds": 0.020603000000846805,
+      "offline_annotation_metrics": {
+        "mean_mrr_first_relevant_at_5": 0.8333333333333334,
+        "relevant_irrelevant_by_group": {
+          "male": {
+            "relevant": 30,
+            "irrelevant": 0
+          },
+          "female": {
+            "relevant": 0,
+            "irrelevant": 20
+          }
+        },
+        "relevant_evidence_group_disparity_mean": 1.0,
+        "equalized_odds": {
+          "status": "N/A",
+          "reason": "The released split has only relevant male and irrelevant female documents; each group lacks one relevance class, so group-conditional TPR/FPR gaps are not estimable."
+        },
+        "per_query": [
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 88
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 51
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 2,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 3
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.3333333333333333,
+            "first_relevant_rank": 3,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 2,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 3
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 87
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 88
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 90
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 1,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 4
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 86
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 89
+          }
+        ]
+      },
+      "average_latency_seconds_per_query": 0.0020603000000846807
+    },
+    "adaptive_retrieval": {
+      "items": [
+        {
+          "question_id": "test_1",
+          "topic_id": "Agriculture",
+          "initial_document_ids": [
+            "6204715",
+            "81034",
+            "4302211",
+            "299672",
+            "33541166"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "6204715",
+            "81034",
+            "299672",
+            "4302211",
+            "33541166"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_101",
+          "topic_id": "Amphibians and Reptiles",
+          "initial_document_ids": [
+            "66161",
+            "53803157",
+            "36049225",
+            "65493245",
+            "45633243"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "53803157",
+            "66161",
+            "45633243",
+            "36049225",
+            "65493245"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_201",
+          "topic_id": "Astronomy",
+          "initial_document_ids": [
+            "173278",
+            "71557",
+            "191098",
+            "693482",
+            "19864144"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "71557",
+            "191098",
+            "693482",
+            "173278",
+            "19864144"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_301",
+          "topic_id": "Aviation",
+          "initial_document_ids": [
+            "70592",
+            "685985",
+            "1192074",
+            "404300",
+            "199511"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "70592",
+            "685985",
+            "1192074",
+            "199511",
+            "404300"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_401",
+          "topic_id": "Biography/WikiProject Actors and Filmmakers",
+          "initial_document_ids": [
+            "105307",
+            "2232087",
+            "7886",
+            "15308",
+            "63556"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "15308",
+            "105307",
+            "2232087",
+            "7886",
+            "63556"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_501",
+          "topic_id": "Biography/WikiProject Musicians",
+          "initial_document_ids": [
+            "85432",
+            "12309",
+            "13066",
+            "49107",
+            "12406"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "13066",
+            "85432",
+            "49107",
+            "12406",
+            "12309"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_601",
+          "topic_id": "Biography/science and academia work group",
+          "initial_document_ids": [
+            "8095",
+            "68335",
+            "26275",
+            "31372",
+            "23979"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "68335",
+            "8095",
+            "26275",
+            "31372",
+            "23979"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_701",
+          "topic_id": "Birds",
+          "initial_document_ids": [
+            "766582",
+            "67992",
+            "64057049",
+            "6700844",
+            "1052116"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "766582",
+            "67992",
+            "6700844",
+            "64057049",
+            "1052116"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 2,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 3,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_801",
+          "topic_id": "Books",
+          "initial_document_ids": [
+            "642847",
+            "7563288",
+            "1910758",
+            "728452",
+            "88351"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "7563288",
+            "88351",
+            "642847",
+            "1910758",
+            "728452"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        },
+        {
+          "question_id": "test_901",
+          "topic_id": "Business",
+          "initial_document_ids": [
+            "70964",
+            "173031",
+            "679379",
+            "364094",
+            "698205"
+          ],
+          "additional_document_ids": [],
+          "retrieved_document_ids": [
+            "173031",
+            "364094",
+            "70964",
+            "679379",
+            "698205"
+          ],
+          "controller_decisions": [
+            {
+              "round": 0,
+              "action": "stop",
+              "reason": "no_relevant_candidates"
+            }
+          ],
+          "initial_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          },
+          "final_analysis": {
+            "groups": {
+              "female": {
+                "documents": 1,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              },
+              "male": {
+                "documents": 4,
+                "relevant_documents": 0,
+                "relevance_rate": 0.0
+              }
+            },
+            "group_roles": {
+              "female": "protected",
+              "male": "non_protected"
+            },
+            "total_documents": 5,
+            "relevant_documents": 0,
+            "unknown_group_documents": 0,
+            "missing_groups": [
+              "female",
+              "male"
+            ],
+            "group_disparity": 0.0,
+            "relevance_rate_gap": 0.0,
+            "needs_more_evidence": true,
+            "group_labels_available": true,
+            "fairness_metric_note": "Group disparity is the max-minus-min relevant-evidence share; equal representation is not assumed."
+          }
+        }
+      ],
+      "initial_documents": 50,
+      "final_documents": 50,
+      "additional_retrieval_operations": 19,
+      "additional_documents": 0,
+      "elapsed_seconds": 0.05384270000286051,
+      "offline_annotation_metrics": {
+        "mean_mrr_first_relevant_at_5": 0.8333333333333334,
+        "relevant_irrelevant_by_group": {
+          "male": {
+            "relevant": 30,
+            "irrelevant": 0
+          },
+          "female": {
+            "relevant": 0,
+            "irrelevant": 20
+          }
+        },
+        "relevant_evidence_group_disparity_mean": 1.0,
+        "equalized_odds": {
+          "status": "N/A",
+          "reason": "The released split has only relevant male and irrelevant female documents; each group lacks one relevance class, so group-conditional TPR/FPR gaps are not estimable."
+        },
+        "per_query": [
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 88
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 51
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 2,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 3
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.3333333333333333,
+            "first_relevant_rank": 3,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 2,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 3
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 87
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 88
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 0.5,
+            "first_relevant_rank": 2,
+            "relevant_candidate_count": 89
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 3,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 2
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 90
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 1,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 4
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 86
+          },
+          {
+            "judged_retrieved_count": 5,
+            "relevant_irrelevant_by_group": {
+              "male": {
+                "relevant": 4,
+                "irrelevant": 0
+              },
+              "female": {
+                "relevant": 0,
+                "irrelevant": 1
+              }
+            },
+            "relevant_evidence_group_disparity": 1.0,
+            "mrr_first_relevant_at_5": 1.0,
+            "first_relevant_rank": 1,
+            "relevant_candidate_count": 89
+          }
+        ],
+        "additional_retrieval_annotation_counts": {}
+      },
+      "average_latency_seconds_per_query": 0.005384270000286051
+    }
+  },
+  "unavailable_metrics": [
+    "Exact Match",
+    "ROUGE-1",
+    "answer group disparity",
+    "generation latency"
+  ],
+  "note": "These measurements are retrieval diagnostics only; no baseline/graph/adaptive RAG experiment is claimed complete without generation."
+}

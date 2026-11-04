@@ -1,0 +1,96 @@
+{
+  "mode": "graph",
+  "dataset_size": 10,
+  "utility_metrics": {
+    "optionem": 0.9,
+    "rouge-1": 0.199999999,
+    "em": 0.2,
+    "priorityfairness": 1.0,
+    "mrr": 0.6
+  },
+  "evaluator_metrics": {
+    "em": 0.2,
+    "rouge-1": 0.199999999,
+    "option_em": 0.9,
+    "position_male_ratio": 0.2,
+    "position_female_ratio": 0.4,
+    "mrr_male_at_one": 0.6,
+    "mrr_female_at_one": 0.3,
+    "mrr_male_at_all": 0.7,
+    "mrr_female_at_all": 0.6333333333333333
+  },
+  "retrieval_performance": {
+    "evaluator_metrics": {
+      "mrr": 0.6
+    },
+    "mean_graph_relevance_score_proxy": 0.08267901562039492
+  },
+  "initial_group_disparity_mean": 0.33333333333333337,
+  "group_disparity_mean": 0.33333333333333337,
+  "group_disparity_reduction": 0.0,
+  "equalized_odds": null,
+  "mean_retrieved_documents": 5.0,
+  "additional_retrieval_operations": 0,
+  "additional_documents": 0,
+  "adaptive_triggered_queries": 0,
+  "controller_decisions": [
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ],
+    [
+      {
+        "action": "graph_rank"
+      }
+    ]
+  ],
+  "timing_breakdown_seconds": {
+    "initial_retrieval_seconds": 0.014876300001560594,
+    "graph_and_controller_seconds": 0.018162500000471482,
+    "generation_seconds": 1.914627300000575,
+    "evaluation_seconds": 0.007562299999335664
+  },
+  "elapsed_seconds": 1.9655576000004658,
+  "note": "Equalized odds is reported only when explicit relevance labels are supplied. Group disparity is omitted when demographic labels are unavailable."
+}

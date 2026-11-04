@@ -1,0 +1,4 @@
+Method,Questions,Initial Retrieved,Final Retrieved,Additional Operations,Additional Documents,MRR@5,Relevant Evidence Group Disparity,Avg Retrieval Latency (s),Equalized Odds
+baseline_retrieval,10,50,50,0,0,0.675,1.0,0.0015244800000800752,N/A
+graph_retrieval,10,50,50,0,0,0.8333333333333334,1.0,0.0020603000000846807,N/A
+adaptive_retrieval,10,50,50,19,0,0.8333333333333334,1.0,0.005384270000286051,N/A

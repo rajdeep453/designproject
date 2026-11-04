@@ -1,0 +1,5 @@
+
+Method,EM,ROUGE-1,Answer group gap,Relevant evidence disparity,Qrel MRR@5,Equalized Odds,Retrieved docs,Additional retrieval operations,Additional docs,Average end-to-end latency/query (s)
+baseline,0.2,0.199999999,0.09999999999999998,1.0,0.675,N/A,50,0,0,0.19752443000015774
+graph,0.2,0.199999999,0.2,1.0,0.8333333333333334,N/A,50,0,0,0.19655576000004657
+adaptive_fair,0.2,0.199999999,0.09999999999999998,1.0,0.8333333333333334,N/A,50,14,2,0.20538415999999415

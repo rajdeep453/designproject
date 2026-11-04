@@ -1,0 +1,11 @@
+﻿{
+  "purpose": "Attempt real baseline, graph, and adaptive fair experiments without modifying existing baseline outputs.",
+  "dataset_files": [
+    "output/real_data/trek_2022_fairness/flashrag_trek_2022_fairness_relevant_male_irrelevant_female_4800.jsonl",
+    "output/real_data/trek_2022_fairness/flashrag_trek_2022_fairness_relevant_male_irrelevant_female_4800_gt.json",
+    "output/real_data/trek_2022_fairness/flashrag_trek_2022_geo_all_relevant_europe_non_europe_5000.jsonl",
+    "output/real_data/trek_2022_fairness/flashrag_trek_2022_geo_all_relevant_europe_non_europe_5000_gt.json"
+  ],
+  "comparable_run_settings": {"sample_size": 1, "seed": 2024, "retrieval_topk": 5, "modes": ["baseline", "graph", "adaptive_fair"]},
+  "note": "Sample settings are recorded for reproducibility planning only. No experimental run completed; all model-dependent metrics remain unavailable."
+}

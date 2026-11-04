@@ -1,0 +1,7 @@
+{
+  "mode": "baseline",
+  "dataset_size": 10,
+  "elapsed_seconds": 2.0528249999988475,
+  "additional_retrieval_operations": 0,
+  "mean_retrieved_documents": 5.0
+}

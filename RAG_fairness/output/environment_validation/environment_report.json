@@ -1,0 +1,35 @@
+﻿{
+    "created_utc":  "2026-11-03T20:02:51Z",
+    "python":  "3.10.20",
+    "architecture":  "64-bit",
+    "environment":  "C:\\designproject\\RAG_fairness\\.venv-afgr",
+    "dependency_lock":  "requirements-windows-afgr-lock.txt",
+    "pip_check":  "No broken requirements found",
+    "numpy":  "1.26.4: import and numeric operation passed in project-local venv",
+    "pandas":  "2.2.2: import passed",
+    "msvc_runtime":  "vcruntime140.dll and msvcp140.dll version 14.50.35719.0 present",
+    "previous_temp_venv":  "Retained unchanged; its NumPy native extension previously raised DLL load failed: Access is denied. The project-local environment resolves execution.",
+    "torch":  "2.6.0+cu126",
+    "torch_cuda_runtime":  "12.6",
+    "cuda_available":  true,
+    "gpu":  "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB",
+    "gpu_tensor_test":  "1024x1024 FP16 CUDA matrix multiplication passed and synchronized",
+    "generation_test":  "output/environment_validation/qwen_gpu_generation.json",
+    "qwen":  {
+                 "repo":  "Qwen/Qwen2.5-0.5B-Instruct",
+                 "revision":  "7ae557604adf67be50417f59c2c2f167def9a775",
+                 "local_path":  "models/Qwen2.5-0.5B-Instruct",
+                 "weights_bytes":  988097824,
+                 "weights_sha256":  "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+                 "generation":  "38 tokens generated on GPU; 1.46 seconds; peak allocated 1008363520 bytes"
+             },
+    "system_memory":  {
+                          "total_gib":  15.65,
+                          "available_gib_at_report":  3.03
+                      },
+    "disk":  {
+                 "drive":  "C:",
+                 "free_gib_at_report":  6.35
+             },
+    "end_to_end_runs":  "Baseline, graph, and adaptive_fair each completed on 10 real pilot questions; see full_rag_comparison/comparison_metrics.csv"
+}

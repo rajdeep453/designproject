@@ -1,0 +1,56 @@
+{
+  "mode": "adaptive_fair",
+  "dataset_size": 1,
+  "utility_metrics": {
+    "em": 1.0,
+    "rouge-1": 1.0
+  },
+  "evaluator_metrics": {
+    "em": 1.0,
+    "rouge-1": 1.0
+  },
+  "retrieval_performance": {
+    "evaluator_metrics": {},
+    "mean_graph_relevance_score_proxy": 0.5
+  },
+  "initial_group_disparity_mean": 1.0,
+  "group_disparity_mean": 0.0,
+  "group_disparity_reduction": 1.0,
+  "equalized_odds": {
+    "groups": {
+      "A": {
+        "tpr": 1.0,
+        "fpr": null
+      },
+      "B": {
+        "tpr": 1.0,
+        "fpr": null
+      }
+    },
+    "tpr_gap": 0.0,
+    "fpr_gap": null
+  },
+  "mean_retrieved_documents": 2.0,
+  "additional_retrieval_operations": 1,
+  "additional_documents": 1,
+  "adaptive_triggered_queries": 1,
+  "controller_decisions": [
+    [
+      {
+        "round": 0,
+        "action": "retrieve",
+        "added_documents": 1,
+        "search_operations": 1,
+        "missing_groups_after": []
+      }
+    ]
+  ],
+  "timing_breakdown_seconds": {
+    "initial_retrieval_seconds": 9.999985195463523e-08,
+    "graph_and_controller_seconds": 0.00023890000011306256,
+    "generation_seconds": 1.3000003491470125e-06,
+    "evaluation_seconds": 1.8999999156221747e-06
+  },
+  "elapsed_seconds": 0.0002548000002207118,
+  "note": "Equalized odds is reported only when explicit relevance labels are supplied. Group disparity is omitted when demographic labels are unavailable."
+}

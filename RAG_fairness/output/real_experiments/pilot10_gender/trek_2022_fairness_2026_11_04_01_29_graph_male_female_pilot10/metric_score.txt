@@ -1,0 +1,9 @@
+em: 0.2
+rouge-1: 0.199999999
+option_em: 0.9
+position_male_ratio: 0.2
+position_female_ratio: 0.4
+mrr_male_at_one: 0.6
+mrr_female_at_one: 0.3
+mrr_male_at_all: 0.7
+mrr_female_at_all: 0.6333333333333333

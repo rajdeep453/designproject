@@ -1,0 +1,8 @@
+Adaptive Fair Graph RAG restricted real-data retrieval precheck
+Status: retrieval_only_precheck_not_a_complete_rag_experiment
+Questions: 10
+Topics: Agriculture, Amphibians and Reptiles, Astronomy, Aviation, Biography/WikiProject Actors and Filmmakers, Biography/WikiProject Musicians, Biography/science and academia work group, Birds, Books, Business
+Retrieval method: pure-Python BM25Okapi formula; lowercase regex tokens [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*; no stemming/stopword filtering; k1=1.5, b=0.75, epsilon=0.25; stable original-order tie break
+Top-k: 5
+Generator ran: False
+This is a retrieval-only diagnostic on restricted judged pools, not a full-corpus or generated-answer experiment.

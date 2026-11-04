@@ -1,0 +1,23 @@
+# Virtual environments
+.venv-afgr/
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Models (large files)
+models/Qwen2.5-0.5B-Instruct/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

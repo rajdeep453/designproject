@@ -1,0 +1,15 @@
+{
+  "rag_mode": "adaptive_fair",
+  "retrieval_topk": 3,
+  "graph_rag": {
+    "relevance_threshold": 0.1,
+    "disparity_threshold": 0.35,
+    "max_rounds": 1,
+    "max_additional_docs": 2,
+    "max_expansion_queries": 1,
+    "expected_groups": ["A", "B"],
+    "protected_groups": ["A"],
+    "non_protected_groups": ["B"],
+    "document_group_map": null
+  }
+}

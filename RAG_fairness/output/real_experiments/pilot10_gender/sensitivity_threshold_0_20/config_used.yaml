@@ -1,0 +1,51 @@
+# Restricted annotation-linked 10-question pilot. Baseline configuration remains unchanged.
+data_dir: "output/real_data"
+save_dir: "output/real_experiments/pilot10_gender"
+dataset_name: "trek_2022_fairness"
+split: ["pilot10_gender"]
+test_sample_num: ~
+random_sample: false
+seed: 2024
+gpu_id: "0"
+
+retrieval_method: "bm25_small"
+retrieval_topk: 5
+retrieval_batch_size: 1
+retrieval_use_fp16: false
+save_retrieval_cache: false
+use_retrieval_cache: false
+retrieval_cache_path: ~
+index_path: "in-memory"
+method2index:
+  bm25_small: "in-memory"
+corpus_path: "output/real_data/trek_2022_fairness/pilot10_gender_manifest.json"
+
+framework: "hf"
+generator_model: "Qwen2.5-0.5B-Instruct"
+generator_model_path: "models/Qwen2.5-0.5B-Instruct"
+generator_max_input_len: 2048
+generator_batch_size: 1
+generation_params:
+  do_sample: false
+  max_tokens: 64
+use_fid: false
+
+metrics: ["em", "rouge-1", "optionem", "priorityfairness", "mrr"]
+metric_setting:
+  retrieval_recall_topk: 5
+pilot_ground_truth_path: "output/real_data/trek_2022_fairness/pilot10_gender_gt.json"
+pilot_qrels_path: "output/real_data/trek_2022_fairness/pilot10_gender_qrels.json"
+pilot_manifest: "output/real_data/trek_2022_fairness/pilot10_gender_manifest.json"
+
+graph_rag:
+  # Require stronger query-text support before an expansion can enter evidence.
+  # This reduces weak lexical matches that would otherwise be fetched only
+  # because a demographic group is absent from the initial relevant evidence.
+  relevance_threshold: 0.2
+  disparity_threshold: 0.35
+  max_rounds: 1
+  max_additional_docs: 3
+  max_expansion_queries: 2
+  expected_groups: ["male", "female"]
+  protected_groups: ["female"]
+  non_protected_groups: ["male"]
